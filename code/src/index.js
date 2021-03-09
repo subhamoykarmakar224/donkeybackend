@@ -16,19 +16,15 @@ app.get("/", (req, res) => {
   res.send("Hello world!");
 });
 
-app.post("/add/device", jsonParser, (req, res) => {
-  console.log("<<< ---- NEW DEVICE ---- >>>");
-  console.log("ID :: " + req.body.did);
-  console.log("Name :: " + req.body.name);
-  console.log("DateTime :: " + req.body.dateTime);
-  console.log("---------------------------------");
-});
-
 app.post("/add/data", jsonParser, (req, res) => {
-  console.log("<<< ---- NEW DEVICE ---- >>>");
-  console.log("ID :: " + req.body.sid);
-  console.log("Name :: " + req.body.name);
-  console.log("phone :: " + req.body.phone);
+  console.log("Data :: " + req.body);
+  console.log("Device ID :: " + req.body.deviceid);
+  console.log("Packet ID :: " + req.body.packetid);
+  console.log("TimeStamp :: " + req.body.timestamp);
+  console.log("Delivery Type :: " + req.body.delivery_type);
+  console.log("First Packet :: " + req.body.first_packet);
+  console.log("Longitude :: " + req.body.payload.lon);
+  console.log("Latitude :: " + req.body.payload.lat);
   console.log("---------------------------------");
 });
 
