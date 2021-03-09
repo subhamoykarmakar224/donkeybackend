@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
   res.send("Hello world!");
 });
 
-app.get("/add/device", jsonParser, (req, res) => {
+app.post("/add/device", jsonParser, (req, res) => {
   console.log("<<< ---- NEW DEVICE ---- >>>");
   console.log("ID :: " + req.body.did);
   console.log("Name :: " + req.body.name);
@@ -24,7 +24,7 @@ app.get("/add/device", jsonParser, (req, res) => {
   console.log("---------------------------------");
 });
 
-app.get("/add/data", jsonParser, (req, res) => {
+app.post("/add/data", jsonParser, (req, res) => {
   console.log("<<< ---- NEW DEVICE ---- >>>");
   console.log("ID :: " + req.body.sid);
   console.log("Name :: " + req.body.name);
