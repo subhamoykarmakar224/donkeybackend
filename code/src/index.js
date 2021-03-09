@@ -18,13 +18,13 @@ app.get("/", (req, res) => {
 
 app.post("/add/data", jsonParser, (req, res) => {
   console.log("Data :: " + req.body);
-  console.log("Device ID :: " + req.body.deviceid);
-  console.log("Packet ID :: " + req.body.packetid);
-  console.log("TimeStamp :: " + req.body.timestamp);
-  console.log("Delivery Type :: " + req.body.delivery_type);
-  console.log("First Packet :: " + req.body.first_packet);
-  console.log("Longitude :: " + req.body.payload.lon);
-  console.log("Latitude :: " + req.body.payload.lat);
+  // console.log("Device ID :: " + req.body.deviceid);
+  // console.log("Packet ID :: " + req.body.packetid);
+  // console.log("TimeStamp :: " + req.body.timestamp);
+  // console.log("Delivery Type :: " + req.body.delivery_type);
+  // console.log("First Packet :: " + req.body.first_packet);
+  // console.log("Longitude :: " + req.body.payload.lon);
+  // console.log("Latitude :: " + req.body.payload.lat);
   console.log("---------------------------------");
 });
 
