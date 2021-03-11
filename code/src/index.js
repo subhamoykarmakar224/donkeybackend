@@ -38,7 +38,7 @@ app.post("/add/data", jsonParser, (req, res) => {
       res.sendStatus(403);
       throw err;
     }
-    console.log('DONE: Inserted: ', result);
+    console.log('DONE: Insert ');
     res.sendStatus(200);
   });
 });
