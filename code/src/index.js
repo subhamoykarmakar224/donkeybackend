@@ -19,7 +19,10 @@ var con = mysql.createConnection({
   database: "donkey" // use the specified database
 });
 
-con.connect();
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
 
 // define a default route handler for the default home page
 app.get("/", (req, res) => {
@@ -28,12 +31,13 @@ app.get("/", (req, res) => {
 
 app.post("/add/data", jsonParser, (req, res) => {
   var data = JSON.stringify(req.body);
-  con.query("insert into data (record) values ("+ data +")", function (err, rows, fields) {
+  console.log("Insert: " + data);
+  con.query("insert into data (record) values ('"+ data +"')", function (err, result) {
     if (err) {
       res.sendStatus(403);
       throw err;
     }
-    console.log('The solution is: ', rows[0].solution)
+    console.log('DONE: Inserted: ', result);
     res.sendStatus(200);
   });
 });
