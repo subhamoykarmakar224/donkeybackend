@@ -43,8 +43,6 @@ app.post("/add/data", jsonParser, (req, res) => {
   });
 });
 
-
-
 // start the Express server
 app.listen(port, () => {
   console.log(`Server Started...`);
