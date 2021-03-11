@@ -15,8 +15,8 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 var con = mysql.createConnection({
   // host: "http://128.195.52.69/",    // ip address of server running mysql
   host: "localhost",    // ip address of server running mysql
-  user: "root",    // user name to your mysql database
-  password: "cdcju", // corresponding password
+  user: "subhamoy",    // user name to your mysql database
+  password: "password", // corresponding password
   database: "donkey" // use the specified database
 });
 
