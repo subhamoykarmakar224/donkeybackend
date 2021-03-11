@@ -26,8 +26,8 @@ con.connect(function(err) {
 });
 
 // define a default route handler for the default home page
-app.get("/", (req, res) => {
-  res.send("Hello world!");
+app.get("/testconnection", (req, res) => {
+  res.sendStatus(200); // ok
 });
 
 app.post("/add/data", jsonParser, (req, res) => {
