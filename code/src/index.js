@@ -31,7 +31,7 @@ app.post("/add/data", jsonParser, (req, res) => {
   con.query("insert into data (record) values ("+ data +")", function (err, rows, fields) {
     if (err) {
       res.sendStatus(403);
-      // throw err;
+      throw err;
     }
     console.log('The solution is: ', rows[0].solution)
     res.sendStatus(200);
