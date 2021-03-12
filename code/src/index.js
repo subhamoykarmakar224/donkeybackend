@@ -32,13 +32,13 @@ app.get("/testconnection", (req, res) => {
 
 app.post("/add/data", jsonParser, (req, res) => {
   var data = JSON.stringify(req.body);
-  console.log("Insert: " + data);
+  // console.log("Insert: " + data);
   con.query("insert into data (record) values ('"+ data +"')", function (err, result) {
     if (err) {
       res.sendStatus(403);
       throw err;
     }
-    console.log('DONE: Insert ');
+    // console.log('DONE: Insert ');
     res.sendStatus(200);
   });
 });
